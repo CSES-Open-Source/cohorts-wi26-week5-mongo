@@ -246,7 +246,7 @@ Copy a movie _id, replace `<YOUR_MOVIE_ID>` below, and run:
 curl -X DELETE http://localhost:3000/api/movies/<YOUR_MOVIE_ID>
 ```
 
-## Challenge: Connect Your Frontend!
+## Challenge 1: Connect Your Frontend!
 
 Now that your backend is fully functional with a real database, it's time to connect the React frontend you built in Week 3! This is hard, and not as straightforward as it looks. Spend some time figuring it out. Use the internet, documentation, AI, and any available resources at your disposal. A sample exists in the solution directory (`solution/src/App.jsx`).
 
@@ -263,6 +263,13 @@ Now that your backend is fully functional with a real database, it's time to con
 
 - MongoDB uses `_id` (with an underscore) instead of `id`. You'll need to update your mapping key from `key={movie.id}` to `key={movie._id}` in your React components!
 - Your Express server already has `cors` enabled, which allows your React app (usually on port 5173) to securely talk to your Express app (on port 3000).
+
+## Challenge 2: Add Create, Update, and Delete Functionality to the Frontend
+
+Now that you can read movies from the database, try adding the ability to create new movies, update existing ones, and delete movies directly from your React app!
+
+- You will need to create forms for adding and editing movies, and buttons for deleting movies. Each of these actions will correspond to a POST, PUT, or DELETE request to your Express server's API endpoints.
+- Use the `fetch()` API to make POST, PUT, and DELETE requests to your Express server's endpoints. Remember to update your React state accordingly after each operation to keep the UI in sync with the database.
 
 ## Congratulations! You Built a Full-Stack App!
 
